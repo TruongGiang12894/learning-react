@@ -11,10 +11,14 @@
 }
 .card-header{
     margin: 0px auto;
-    height: 60px;
-    width: 100px;
+    height: 75px;
+    width: 150px;
     border-bottom: 2px solid black ;
 }
 .card>h5{
     margin: 7px auto;
+}
+button{
+    width: 70px;
+    margin: 0px auto;
 }

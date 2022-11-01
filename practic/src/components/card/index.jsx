@@ -1,48 +1,21 @@
-import React from 'react';
+import React,{ useState }  from 'react';
 import './style.css';
-Card.propTypes = {
-    // name: PropTypes.number
-};
-const props = [
-    {
-        Tittle: 'Task 1',
-        Status: 'New',
-        Description: '......'
-    }, {
-        Tittle: 'Task 2',
-        Status: 'New',
-        Description: '......'
-    }, {
-        Tittle: 'Task 3',
-        Status: 'New',
-        Description: '......'
-    }, {
-        Tittle: 'Task 4',
-        Status: 'New',
-        Description: '......'
-    }, {
-        Tittle: 'Task 5',
-        Status: 'New',
-        Description: '......'
-    }, {
-        Tittle: 'Task 6',
-        Status: 'New',
-        Description: '......'
-    }
-]
-function Card() {
+import { status, statuses } from '../const';
+
+
+
+function Card({title,status,desc}) {
     return (
-        props.map(item => (
-            
-            <div className="card">
-                <div className="card-header">
-                    <h5 className="card-title">Title: {item.Tittle}</h5>
-                    <h5 className="card-status">Status: {item.Status}</h5>
-                    </div>
-                    <h5>Description: {item.Description}</h5>
+
+        <div className="card">
+            <div className="card-header">
+                <h5 className="card-title">Title: {title}</h5>
+                <h5 className="card-status"><button >Status:</button> {status}</h5>
             </div>
-        
-        ))
+            <h5>Description: {desc}</h5>
+
+            
+        </div>
     );
 }
 
